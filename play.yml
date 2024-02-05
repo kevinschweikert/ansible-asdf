@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: Test that my module works
+      asdf:
+        packages:
+          - name: test1
+            version: 2
+          - test2
+      register: result
+
+    - debug: var=result
